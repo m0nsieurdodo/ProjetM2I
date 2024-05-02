@@ -1,9 +1,11 @@
 
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public interface GenericDAO<T> {
-	T findById(Integer id);
-	List<T> findAll();
+	Montre findById(Integer id) throws SQLException;
+	ArrayList<Montre> findAll() throws SQLException ;
 	void save (T entite);
 	void delete (T entite);
 	
