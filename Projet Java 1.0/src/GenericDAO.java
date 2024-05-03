@@ -8,5 +8,7 @@ public interface GenericDAO<T> {
 	ArrayList<Montre> findAll() throws SQLException ;
 	void save (T entite);
 	void delete (T entite);
+	void save(Montre montre);
+	void save(Montre montre, int id);
 	
 }
