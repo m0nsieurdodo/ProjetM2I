@@ -5,7 +5,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		System.out.printf("Bienvenue sur le Gestionnaire d'Inventaire de Produit ! %n");
+		System.out.printf("Bienvenue sur le Gestionnaire d'Inventaire de Produit ! %n %n");
 		
 		while(true) {
 			menu();
@@ -20,6 +20,7 @@ public class Main {
 				+ "2. Ajouter un produit %n"
 				+ "3. Trouvez un produit %n"
 				+ "4. Modifier un produit %n"
+				+ "5. Supprimer un produit %n"
 				+ "*************************** %n"
 				+ "Votre choix : ");
 		
@@ -37,6 +38,9 @@ public class Main {
 		}
 		else if (res == 4) {
 			MainModifierMontre.main(null);
+		}
+		else if (res == 5) {
+			MainSupprimerMontre.main(null);
 		}
 		
 	}

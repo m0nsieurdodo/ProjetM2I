@@ -99,8 +99,18 @@ public class MontreDAO implements GenericDAO<MontreDAO>{
 	}
 
 	@Override
-	public void delete(MontreDAO entite) {
-		// TODO Auto-generated method stub
+	public void delete(int id) {
+		PreparedStatement ps;
+		try {
+			ps = connection.prepareStatement("DELETE FROM montre WHERE id = ?");
+			ps.setInt(1, id);
+			System.out.println("Produit supprimé.");
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 	}
 
@@ -112,6 +122,12 @@ public class MontreDAO implements GenericDAO<MontreDAO>{
 
 	@Override
 	public void save(Montre montre) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(MontreDAO entite) {
 		// TODO Auto-generated method stub
 		
 	};

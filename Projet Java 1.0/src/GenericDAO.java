@@ -10,5 +10,6 @@ public interface GenericDAO<T> {
 	void delete (T entite);
 	void save(Montre montre);
 	void save(Montre montre, int id);
+	void delete(int id);
 	
 }
